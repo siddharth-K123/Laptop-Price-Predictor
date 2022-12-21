@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <body>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Laptop Price Prediction</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+        
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style> 
+/* For mobile phones: */
+[class*="col-"] {
+width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+
+body, html {
+    height: 80%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+    box-sizing: border-box;
+    }
+
+.bg-image {
+    /* The image used */
+    /* background-image: url("https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyamin-mellish-106399.jpg&fm=jpg&_gl=1*1b5rprq*_ga*MTcyMDQyOTY5MS4xNjcwNjAxNDA1*_ga_8JE65Q40S6*MTY3MTAzNzE0My4yLjEuMTY3MTAzNzg5OC4wLjAuMA.."); */
+       /* background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/04/Google-images-free-download.jpg); */
+       background-image: url(https://images.wallpaperscraft.com/image/single/laptop_phone_clock_178806_1920x1080.jpg);
+    /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+    /* Full height */
+    height: 180%;
+    width: 100;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+.bg-text {
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    height: 120%;
+    padding: 10px;
+    text-align:center;
+}
+</style>
+<div class="bg-image"></div>
+<center>
+    <div class="bg-text">
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Laptop Price Predictor</title>
+</head>
+
+<body style="background-color: rgb(205, 209, 228);">
+<h1> Laptop Price Predictor </h1>
+<form method="POST" action="{{url_for('home')}}">
+     <!-- Headings for the form --> 
+     <div class="headingsContainer">
+            <h3 style="color:rgb(254, 253, 253);">Enter Your Personal Laptop Configurations</h3>
+        </div>
+        
+        <!-- Main container for all inputs -->
+        <div class="mainContainer">
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Ram (GB) : </b></label>
+            <select placeholder="Enter Ram" name="Ram" style="width: 180px;" required>
+                <option></option>
+                <option value = "2">2</option>
+                <option value = "4">4</option>
+                <option value = "6">6</option>
+                <option value = "8">8</option>
+                <option value = "12">12</option>
+                <option value = "16">16</option>
+                <option value = "24">24</option>
+                <option value = "32">32</option>
+            </select>
+
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Weight (Kg) : </b></label>
+            <!-- <select placeholder="Weight" name="Weight" style="width: 180px;" required></select> -->
+            <input style="font-size:10px" type="number" name="Weight" id="Weight" required="required" min="0.1" max="5", step = 'any', required ><br>
+            <!-- <h4 style="color:rgb(254, 253, 253);">Range(0.1 t0 5 Kg)</h4> -->
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>TouchScreen : </b></label>
+            <select placeholder="TouchScreen" name="TouchScreen" style="width: 180px;" required>
+                <option></option>
+                <option value = "0">0</option>
+                <option value = "1">1</option>
+            </select>
+            
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Ips : </b></label>
+            <select placeholder="Ips" name="Ips" style="width: 180px;" required>
+                <option></option>
+                <option value = "0">0</option>
+                <option value = "1">1</option>      
+            </select>
+            <h4 style="color:rgb(254, 253, 253);">IPS is a LCD monitor</h4> 
+            <br><br>
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>PPI : </b></label>
+            <input style="font-size:10px" type="number" name="PPI" id="PPI" required="required" min="50" max="400", maxlength="3", required ><br>
+            <h1 style="color:rgb(255, 255, 255);font-size:10px;"></h1>
+            <h4 style="color:rgb(254, 253, 253);">Pixels per Inches (50 to 400)</h4>
+
+            <br><br>
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>HDD : </b></label>
+            <select placeholder="HDD" name="HDD" style="width: 180px;" required>
+                <option></option>
+                <option value = "0">0</option>
+                <option value = "32">32</option>
+                <option value = "128">128</option>
+                <option value = "500">500</option>
+                <option value = "1000">1000</option>
+                <option value = "2000">2000</option>
+
+            </select>
+            <br><br>
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>SSD : </b></label>
+            <select placeholder="SSD" name="SSD" style="width: 180px;" required>
+                <option></option>
+                <option value = "0">0</option>
+                <option value = "128">128</option>
+                <option value = "512">512</option>
+                <option value = "1000">1000</option>
+                <option value = "32">32</option>
+                <option value = "16">16</option>
+                <option value = "64">64</option>
+                <option value = "1024">1024</option>
+                <option value = "768">768</option>
+                <option value = "240">240</option>
+                <option value = "8">8</option>
+
+            </select>
+
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Company : </b></label>
+            <select placeholder="Company" name="Company" style="width: 180px;" required>
+                <option></option>
+                <option value = "Acer">Acer</option>
+                <option value = "Apple">Apple</option>
+                <option value = "Asus">Asus</option>
+                <option value = "Chuwi">Chuwi</option>
+                <option value = "Dell">Dell</option>
+                <option value = "Fujitsu">Fujitsu</option>
+                <option value = "Google">Google</option>
+                <option value = "HP">HP</option>
+                <option value = "Huawei">Huawei</option>
+                <option value = "LG">LG</option>
+                <option value = "Lenovo">Lenovo</option>
+                <option value = "MSI">MSI</option>
+                <option value = "Mediacom">Mediacom</option>
+                <option value = "Microsoft">Microsoft</option>
+                <option value = "Razer">Razer</option>
+                <option value = "Samsung">Samsung</option>
+                <option value = "Toshiba">Toshiba</option>
+                <option value = "Vero">Vero</option>
+                <option value = "Xiaomi">Xiaomi</option>
+
+            </select>
+
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>TypeName : </b></label>
+            <select placeholder="TypeName" name="TypeName" style="width: 180px;" required>
+                <option></option>
+                <option value = "2 in 1 Convertible">2 in 1 Convertible</option>
+                <option value = "Gaming">Gaming</option>
+                <option value = "Netbook">Netbook</option>
+                <option value = "Notebook">Notebook</option>
+                <option value = "Ultrabook">Ultrabook</option>
+                <option value = "Workstation">Workstation</option>
+
+            </select>
+
+            <br><br>
+
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Gpu_Brand : </b></label>
+            <select placeholder="Gpu_Brand" name="Gpu_Brand" style="width: 180px;" required>
+                <option></option>
+                <option value = "AMD">AMD</option>
+                <option value = "Intel">Intel</option>
+                <option value = "Nvidia">Nvidia</option>
+            </select>
+
+            <br><br>
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>os : </b></label>
+            <select placeholder="os" name="os" style="width: 180px;" required>
+                <option></option>
+
+                <option value = "Mac">Mac</option>
+                <option value = "Others/No Os/Linux">Others/No Os/Linux</option>
+                <option value = "Windows">Windows</option>
+            </select>
+
+            <br><br>
+
+            <label style="font: size 15px;font-family:verdana" class="card-title", size = ><b>Cpu_Brand : </b></label>
+            <select placeholder="Cpu_Brand" name="Cpu_Brand" style="width: 180px;" required>
+                <option></option>
+                <option value = "AMD">AMD</option>
+                <option value = "Intel Core i3">Intel Core i3</option>
+                <option value = "Intel Core i5">Intel Core i5</option>
+                <option value = "Intel Core i7">Intel Core i7</option>
+                <option value = "Other Intel Processor">Other Intel Processor</option>
+            </select>
+
+            <style>
+                .button {
+                    display: inline-block;
+                    border-radius: 4px;
+                    background-color: #278ed2;
+                    border: none;
+                    color: #FFFFFF;
+                    text-align: center;
+                    font-size: 28px;
+                    padding: 20px;
+                    width: 250px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    margin: 5px;
+                    }
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+                }
+
+                .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+                }
+
+                .button:hover span {
+                padding-right: 25px;
+                }
+
+                .button:hover span:after {
+                opacity: 1;
+                right: 0;
+                }
+            </style>
+            <br></br>
+            <br></br>
+            
+            <input type="submit" , value='Predict!' >
+        <center>
+        <br>
+        <p>© Siddharth Karnure</p>
+    </div>
+    </div>
+</body>
+</html>           
+
+
+            <!-- <br><br>
+                                
+            
+            </select>
+
+            <br><br>
+            <!-- Submit button -->
+            <!-- <input type="submit" , value='Predict!' >
+            <br><br> -->
+            <!-- <h3 style="color:orange;">Your Laptop Cost is Rs: <b> {{ price }}</b> </h3> -->
+        <!-- </div>
+    </form> -->
+
+
+<!-- </body>
+</html> -->
